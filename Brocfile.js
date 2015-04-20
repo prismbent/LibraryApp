@@ -3,8 +3,42 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
+app.import('vendor/fontello/fontello.css');
+app.import('vendor/fontello/font/fontello.ttf', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.eot', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.svg', {
+  destDir: 'font'
+});
+app.import('vendor/fontello/font/fontello.woff', {
+  destDir: 'font'
+});
 
-// Use `app.import` to add additional libraries to the generated
+app.import('bower_components/picnic/releases/picnic.min.css');
+
+app.import('bower_components/ic-ajax/dist/named-amd/main.js', {
+	exports: {
+		'ic-ajax': [
+			'default',
+			'defineFixture',
+			'lookupFixture',
+			'raw',
+			'request',
+		]
+	}
+});
+
+app.import('bower_components/borrowers-dates/index.js', {
+	exports: {
+		'borrowers-dates': [
+			'format'
+		]
+	}
+})
+// Use `app.import` to add additional libraries to the generatedp
 // output files.
 //
 // If you need to use different assets in different
